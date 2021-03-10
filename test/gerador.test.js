@@ -128,9 +128,20 @@ describe('Gerador', () =>{
             idade: 50,
             valorDoEmprestimo: 80.00,
         };
+
+        const cliente2 = {
+            nome: 'Paul McCartney',
+            salario: 3059.00,
+            idade: 50,
+            valorDoEmprestimo: 200000.00,
+        };
       
         expect(() => {
             g.montarPropostas(cliente1)
+        }).toThrow('Valor do emprestimo tem que ser entre R$100,00 e R$100.000,00');
+      
+        expect(() => {
+            g.montarPropostas(cliente2)
         }).toThrow('Valor do emprestimo tem que ser entre R$100,00 e R$100.000,00');
       
       });
