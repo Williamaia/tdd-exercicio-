@@ -102,9 +102,20 @@ describe('Gerador', () =>{
             idade: 77,
             valorDoEmprestimo: 1000.00,
         };
+
+        const cliente2 = {
+            nome: 'Tina Turner',
+            salario: 2580.00,
+            idade: 16,
+            valorDoEmprestimo: 10000.00,
+          };
          
         expect(() => {
             g.montarPropostas(cliente1)
+        }).toThrow('Idade tem que ser entre 18 e 70 anos.');
+          
+        expect(() => {
+            g.montarPropostas(cliente2)
         }).toThrow('Idade tem que ser entre 18 e 70 anos.');
       
       });
