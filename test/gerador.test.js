@@ -120,4 +120,19 @@ describe('Gerador', () =>{
       
       });
 
+      test('valor de emprestimo menor que R$100,00 ou maior que R$100.000,00', () =>{
+  
+        const cliente1 = {
+            nome: 'Whitney Houston',
+            salario: 12000.00,
+            idade: 50,
+            valorDoEmprestimo: 80.00,
+        };
+      
+        expect(() => {
+            g.montarPropostas(cliente1)
+        }).toThrow('Valor do emprestimo tem que ser entre R$100,00 e R$100.000,00');
+      
+      });
+
 });
