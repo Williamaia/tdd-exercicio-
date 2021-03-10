@@ -1,0 +1,13 @@
+{
+  "name": "problema-tdd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3"
+  }
+}
