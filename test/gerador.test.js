@@ -94,4 +94,19 @@ describe('Gerador', () =>{
 
     });
 
+    test('client com idade menor que 18 ou maior que 70', () =>{
+        
+        const cliente1 = {
+            nome: 'Cyndi Lauper',
+            salario: 1500.00,
+            idade: 77,
+            valorDoEmprestimo: 1000.00,
+        };
+         
+        expect(() => {
+            g.montarPropostas(cliente1)
+        }).toThrow('Idade tem que ser entre 18 e 70 anos.');
+      
+      });
+
 });
